@@ -83,14 +83,7 @@ export default {
         value: "actions",
       },
     ],
-    // { text: "Name", value: "name" },
-    //     { text: "Code", value: "code" },
-    //     { text: "Active", value: "active" },
-    //     {
-    //       text: "Actions",
-    //       sortable: false,
-    //       value: "actions",
-    //     },
+
     schools: [],
     school: {
       id: null,
@@ -141,34 +134,6 @@ export default {
       await this.axios.delete("http://localhost:8080/school/" + id);
       this.getSchoolList();
     },
-
-    // deleteItem(item) {
-    //   this.editedIndex = this.schools.indexOf(item);
-    //   this.editedItem = Object.assign({}, item);
-    //   this.dialogDelete = true;
-    // },
-
-    // deleteItemConfirm() {
-    //   this.schools.splice(this.editedIndex, 1);
-    //   this.closeDelete();
-    // },
-
-    // closeDelete() {
-    //   this.dialogDelete = false;
-    //   this.$nextTick(() => {
-    //     this.editedItem = Object.assign({}, this.defaultItem);
-    //     this.editedIndex = -1;
-    //   });
-    // },
-
-    // save() {
-    //   if (this.editedIndex > -1) {
-    //     this.updateSchool();
-    //   } else {
-    //     this.addSchool();
-    //   }
-    //   this.close();
-    // },
 
     clear() {
       this.editedItem = {};
